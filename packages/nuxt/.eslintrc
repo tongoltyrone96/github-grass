@@ -1,0 +1,32 @@
+{
+  "root": true,
+  "extends": [
+    "@nuxt/eslint-config"
+  ],
+  "rules": {
+    // TS already checks this
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "off"
+    ],
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "only-multiline"
+      }
+    ],
+    "vue/require-v-for-key": "off"
+  }
+}

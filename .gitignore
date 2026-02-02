@@ -1,0 +1,14 @@
+node_modules
+coverage
+npm-debug.log
+yarn-error.log
+.nyc_output
+coverage.lcov
+dist
+package-lock.json
+.DS_Store
+temp
+roadmap.md
+*-debug.log
+docs/api
+.firebase

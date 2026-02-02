@@ -1,0 +1,7 @@
+[build.environment]
+NODE_VERSION = "16"
+
+[build]
+command = "pnpm run -w docs:build"
+ignore = "./scripts/docs-check.sh"
+publish = "docs/.vitepress/dist"

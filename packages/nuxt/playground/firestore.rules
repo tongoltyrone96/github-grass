@@ -1,0 +1,53 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+  	match /todos/{todoId} {
+    	allow read, write;
+    }
+  	match /tweets/{todoId} {
+    	allow read, write;
+    }
+  	match /users/{todoId} {
+    	allow read: if request.auth.uid != null;
+      allow write: if false;
+    }
+    match /demo-todos/{todoId} {
+    	allow read, write;
+    }
+    match /vuexfireItems1/{id} {
+    	allow read, write;
+    }
+    match /vuexfireItems2/{id} {
+    	allow read, write;
+    }
+    match /configs/jORwjIykFo2NmkdzTkhU {
+    	allow read, write;
+    }
+    match /empty/{emptyId} {
+    	allow read;
+    }
+    match /none/{noneId} {
+    	allow read;
+    }
+    match /comentedTodos/{id} {
+    	allow read, write;
+    }
+    match /configs/jORwjIykFo2NmkdzTkhU {
+    	allow read, write;
+    }
+
+    match /secrets/{userId} {
+      allow read, write: if request.auth.uid == userId;
+    }
+
+    match /bug-reports/{issueId}/objects/{documentId} {
+    	allow read, update;
+      allow create: if false;
+      allow delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

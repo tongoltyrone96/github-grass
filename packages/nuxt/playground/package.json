@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "prepare": "nuxi prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.0.8",
+    "nuxt": "^3.12.4"
+  },
+  "dependencies": {
+    "@firebase/app-types": "^0.9.3",
+    "firebase": "^11.1.0",
+    "nuxt-vuefire": "workspace:*",
+    "vuefire": "workspace:*"
+  }
+}
